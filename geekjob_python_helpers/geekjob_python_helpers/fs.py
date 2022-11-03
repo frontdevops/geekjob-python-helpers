@@ -1,5 +1,5 @@
 import os
-from magic_config import Config
+import logging
 
 
 def _import_(fn: str) -> None:
@@ -9,8 +9,7 @@ def _import_(fn: str) -> None:
     if fn.startswith("_") or not fn.endswith(".py"):
         return None
     fn = fn[:-3].replace("/", ".")
-    if Config.DEBUG:
-        print("✅  import(" + fn + ")")
+    logging.debug("▶️  import(" + fn + ")")
     return __import__(fn)
 
 

@@ -39,11 +39,12 @@ setup(
     version=project_meta["project"]["version"],
     author=project_meta["project"]["authors"][0]["name"],
     author_email=project_meta["project"]["authors"][0]["email"],
-    description="A simple library for easy work with key-value storages and document databases",
+    description=project_meta["project"]["description"],
     long_description=get_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/frontdevops/geekjob-python-helpers",
-    download_url="https://github.com/frontdevops/geekjob-python-helpers/archive/refs/tags/1.0.0.tar.gz",
+    download_url=("https://github.com/frontdevops/geekjob-python-helpers/archive/refs/tags/"
+                  f"{project_meta['project']['version']}.tar.gz"),
     project_urls={
         "Documentation": "https://github.com/frontdevops/geekjob-python-helpers/blob/main/README.md",
         "Source": "https://github.com/frontdevops/geekjob-python-helpers",
